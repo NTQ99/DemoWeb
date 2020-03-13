@@ -9,14 +9,14 @@ namespace DemoWeb.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class DemoController : ControllerBase
+    public class CustomerController : ControllerBase
     {
-        string[] days = { "Mon", "Tue", "Wed" };
+        string[] customer = { "2", "Nguyễn Văn A", "HN", "0123456789" };
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return days;
+            return customer;
         }
     }
 }

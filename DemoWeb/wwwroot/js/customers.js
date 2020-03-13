@@ -1,16 +1,24 @@
 ﻿$(document).ready(function () {
-    $(".add-btn").click(addAlert);
+    $(".get-btn").click(getData);
+    $(".post-btn").click(postData);
 });
 
-function addAlert() {
+// Lấy dữ liệu khách hàng từ server
+function getData() {
     $.ajax({
-        url: 'https://localhost:44384/api/demo',
+        url: 'https://localhost:44384/api/customer',
         success: function (res) {
             $("tbody").append(`<tr>
-                <th>${res[0]}</th>
-                <th>${res[1]}</th>
-                <th>${res[2]}</th>
+                <td>${res[0]}</td>
+                <td>${res[1]}</td>
+                <td>${res[2]}</td>
+                <td>${res[3]}</td>
             </tr>`)
         }
     })
+}
+
+//Dẩy dữ liệu khách hàng lên server
+function postData() {
+
 }

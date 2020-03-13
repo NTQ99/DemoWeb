@@ -74,12 +74,8 @@
 		background-color: #0000000a;
 		margin: 10px;
 	}
-	.main-content .customers-detail, tr {
+	.main-content .customers-detail, tr, th, td {
 		border: 1px solid #0000000a;
 		border-collapse: collapse;
-		font-weight: normal;
-	}
-	.main-content .customers-detail, th {
-		font-weight: normal;
-		text-align: left;
+		text-align: center;
 	}
