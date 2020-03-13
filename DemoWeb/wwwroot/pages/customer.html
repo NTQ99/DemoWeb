@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="/css/pages/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="pane1">
+            <div class="logo"></div>
+            <div class="app-name">
+                <div>MISA</div>
+                <div style="font-size: 12pt">StartBooks</div>
+            </div>
+            <button class="toggle-btn"></button>
+        </div>
+        <div class="pane2">
+            <div class="menu-element">
+                <div class="icon"></div>
+                <div class="name">Tổng quan</div>
+            </div>
+            <div class="menu-element">
+                <div class="icon"></div>
+                <div class="name">Tổng quan</div>
+            </div>
+            <div class="menu-element">
+                <div class="icon"></div>
+                <div class="name">Tổng quan</div>
+            </div>
+            <div class="menu-element" style="background-color: rgba(255, 255, 255, 0.3)">
+                <div class="icon"></div>
+                <div class="name">Bán hàng</div>
+            </div>
+            <div class="menu-element">
+                <div class="icon"></div>
+                <div class="name">Tổng quan</div>
+            </div>
+            <div class="menu-element" style="border-top: 1px solid rgba(255, 255, 255, 0.2)">
+                <div class="icon"></div>
+                <div class="name">Danh mục</div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <button style="width: 40px; height: 40px"></button>
+            <button style="width: 40px; height: 40px"></button>
+        </div>
+        <div class="customer-title">
+            Khách hàng
+            <button class="show-btn" style="cursor: pointer">Show</button>
+            <button class="add-btn" style="cursor: pointer">Add</button>
+            <button class="save-btn" style="cursor: pointer">Save</button>
+        </div>
+        <table class="customers-detail">
+            <tr>
+                <th style="font-weight: bold; text-align: center">Tên khách hàng</th>
+                <th style="font-weight: bold; text-align: center ">Địa chỉ</th>
+                <th style="font-weight: bold; text-align: center">Số điện thoại</th>
+            </tr>
+            <tr>
+                <th><input class="name-input"/></th>
+                <th><input class="addr-input"/></th>
+                <th><input class="phone-input"/></th>
+            </tr>
+            <tr>
+                <th>Nguyễn Tuấn Quốc</th>
+                <th>Vĩnh Phúc</th>
+                <th>0344561299</th>
+            </tr>
+        </table>
+    </div>
+    <script src="/vendors/jquery-3.4.1.min.js"></script>
+    <script src="/js/customers.js"></script>
+</body>
+</html>
