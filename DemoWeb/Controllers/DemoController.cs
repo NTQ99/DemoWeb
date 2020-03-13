@@ -13,13 +13,6 @@ namespace DemoWeb.Controllers
     {
         string[] days = { "Mon", "Tue", "Wed" };
 
-        private readonly ILogger<DemoController> _logger;
-
-        public DemoController(ILogger<DemoController> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
