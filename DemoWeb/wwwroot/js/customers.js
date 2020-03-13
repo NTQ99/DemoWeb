@@ -7,6 +7,7 @@
 function getData() {
     $.ajax({
         url: 'https://localhost:44384/api/customer',
+        type: "GET",
         success: function (res) {
             $("tbody").append(`<tr>
                 <td>${res[0]}</td>
@@ -20,5 +21,14 @@ function getData() {
 
 //Dẩy dữ liệu khách hàng lên server
 function postData() {
-
+    $.ajax({
+        url: 'https://localhost:44384/api/customer',
+        type: "POST",
+        data: "2",
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (res) {
+            alert(res);
+        }
+    })
 }

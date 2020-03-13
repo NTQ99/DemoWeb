@@ -36,6 +36,11 @@ namespace DemoWeb.Models
         #endregion
 
         #region "Method/Function"
+        /// <summary>
+        /// Get dữ liệu khách hàng
+        /// </summary>
+        /// <returns></returns>
+        /// CreatedBy: NTQ (13/03/2020)
         public int getId()
         {
             return _id;
@@ -44,7 +49,7 @@ namespace DemoWeb.Models
         {
             return _name;
         }
-        public string getAdd()
+        public string getAddr()
         {
             return _addr;
         }
@@ -54,6 +59,4 @@ namespace DemoWeb.Models
         }
         #endregion
     }
-
-    var customers = new List<Customer>() { Customer(1,)}
 }
