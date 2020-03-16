@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,23 +12,26 @@ namespace DemoWeb.Controllers
     [Route("api/[controller]")]
     public class CustomerController : ControllerBase
     {
-        string[] customer = { "2", "Nguyễn Văn A", "HN", "0123456789" };
-
         /// <summary>
-        /// Fake dữ liệu
+        /// Get du lieu
         /// </summary>
         /// <returns></returns>
+        /// CreatedBy: NTQ (14/03/2020)
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public List<Customer> Get()
         {
-            return customer;
+            return Customer.Customers;
         }
-
+        /// <summary>
+        /// Post du lieu
+        /// </summary>
+        /// <returns></returns>
+        /// CreatedBy: NTQ (14/03/2020)
         [HttpPost]
-        public ActionResult<IEnumerable<string>> Post([FromBody] string id)
+        public bool Post([FromBody] Customer customer)
         {
-            if (id == "2") return customer;
-            else return null;
+            Customer.Customers.Add(customer);
+            return true;
         }
     }
 }
