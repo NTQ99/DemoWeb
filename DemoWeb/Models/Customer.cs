@@ -12,51 +12,35 @@ namespace DemoWeb.Models
     public class Customer
     {
         #region "Declare/Field"
-        private int _id;
-        private string _name;
-        private string _addr;
-        private string _phone;
+        public static List<Customer> Customers = new List<Customer>()
+        {
+            new Customer(){Id = Guid.NewGuid(), Name = "Nguyen Van A", Addr = "HN", Phone = "0123456789"},
+            new Customer(){Id = Guid.NewGuid(), Name = "Nguyen Van B", Addr = "HN", Phone = "0123456789"},
+            new Customer(){Id = Guid.NewGuid(), Name = "Nguyen Van C", Addr = "HN", Phone = "0123456789"},
+            new Customer(){Id = Guid.NewGuid(), Name = "Nguyen Van D", Addr = "HN", Phone = "0123456789"},
+        };
         #endregion
 
         #region "Property"
         /// <summary>
-        /// Khởi tạo dữ liệu khách hàng
+        /// Khoa chinh
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="addr"></param>
-        /// <param name="phone"></param>
-        /// CreatedBy: NTQ (13/03/2020)
-        public Customer(int id, string name, string addr, string phone)
-        {
-            _id = id;
-            _name = name;
-            _addr = addr;
-            _phone = phone;
-        }
+        public Guid? Id { get; set; }
+        /// <summary>
+        /// Ten khach hang
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// Dia chi
+        /// </summary>
+        public string Addr { get; set; }
+        /// <summary>
+        /// Sdt
+        /// </summary>
+        public string Phone { get; set; }
         #endregion
 
         #region "Method/Function"
-        /// <summary>
-        /// Get dữ liệu khách hàng
-        /// </summary>
-        /// <returns></returns>
-        /// CreatedBy: NTQ (13/03/2020)
-        public int getId()
-        {
-            return _id;
-        }
-        public string getName()
-        {
-            return _name;
-        }
-        public string getAddr()
-        {
-            return _addr;
-        }
-        public string getPhone()
-        {
-            return _phone;
-        }
         #endregion
     }
 }

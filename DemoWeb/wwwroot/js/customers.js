@@ -3,30 +3,40 @@
     $(".post-btn").click(postData);
 });
 
-// Lấy dữ liệu khách hàng từ server
+/**
+ * Lay du lieu khach hang
+ * */
 function getData() {
     $.ajax({
         url: 'https://localhost:44384/api/customer',
         type: "GET",
         success: function (res) {
-            $("tbody").append(`<tr>
-                <td>${res[0]}</td>
-                <td>${res[1]}</td>
-                <td>${res[2]}</td>
-                <td>${res[3]}</td>
-            </tr>`)
+            res.forEach(function (value, index) {
+            console.log(value);
+                $("tbody").append(`<tr>
+                    <td>${value.id}</td>
+                    <td>${value.name}</td>
+                    <td>${value.addr}</td>
+                    <td>${value.phone}</td>
+                </tr>`)
+            });
         }
     })
 }
 
-//Dẩy dữ liệu khách hàng lên server
+/**
+ * Gui du lieu khach hang
+ * */
 function postData() {
     $.ajax({
         url: 'https://localhost:44384/api/customer',
         type: "POST",
-        data: "2",
-        dataType: 'json',
-        contentType: 'application/json',
+        contentType: "application/json",
+        data: JSON.stringify({
+            "name": "Nguyen Van GHJH",
+            "addr": "HN",
+            "phone": "0123456789"
+        }),
         success: function (res) {
             alert(res);
         }
